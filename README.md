@@ -23,7 +23,7 @@ Before running the project you need to set up a local database.
 ```
   CREATE SCHEMA `ekanek`;
 ```
-Now to create tables inside the schema:
+Now to create tables inside the schema: 
 ```
     CREATE TABLE `filedetails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -44,3 +44,4 @@ Now to create tables inside the schema:
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ```
+
