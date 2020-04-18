@@ -1,4 +1,4 @@
-package com.example.ekanek;
+package com.example.ekanek.Interfaces;
 
 import org.springframework.web.multipart.MultipartFile;
 

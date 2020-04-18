@@ -1,5 +1,10 @@
-package com.example.ekanek;
+package com.example.ekanek.Controllers;
 
+import com.example.ekanek.Impl.AmazonClient;
+import com.example.ekanek.Interfaces.FileRepository;
+import com.example.ekanek.Dao.Files;
+import com.example.ekanek.Interfaces.S3Services;
+import com.example.ekanek.Dao.User;
 import com.google.common.base.Stopwatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +40,7 @@ public class S3FileUploadController {
     }
 
     @Autowired
-    private globalVariables globalVariables;
+    private com.example.ekanek.globalVariables globalVariables;
 
     @Autowired
     private FileRepository fileRepository;

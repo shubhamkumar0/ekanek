@@ -1,4 +1,4 @@
-package com.example.ekanek;
+package com.example.ekanek.Controllers;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;

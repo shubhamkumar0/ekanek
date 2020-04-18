@@ -1,4 +1,4 @@
-package com.example.ekanek;
+package com.example.ekanek.Dao;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,5 +1,6 @@
-package com.example.ekanek;
+package com.example.ekanek.Interfaces;
 
+import com.example.ekanek.Dao.Files;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

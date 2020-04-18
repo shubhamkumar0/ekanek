@@ -1,5 +1,6 @@
 package com.example.ekanek;
 
+import com.example.ekanek.Dao.User;
 import org.springframework.stereotype.Component;
 
 @Component

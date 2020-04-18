@@ -1,5 +1,7 @@
-package com.example.ekanek;
+package com.example.ekanek.Controllers;
 
+import com.example.ekanek.Dao.User;
+import com.example.ekanek.Interfaces.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -19,7 +19,7 @@ public class HomeController {
     private UserRepository userRepository;
 
     @Autowired
-    private globalVariables globalVariables;
+    private com.example.ekanek.globalVariables globalVariables;
 
     @RequestMapping("/")
     public ModelAndView home() {
