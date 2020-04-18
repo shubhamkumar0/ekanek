@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Demo App</title>
+</head>
+
+<body>
+<div class="container">
+    <nav class = "navbar navbar-expand-sm navbar-dark bg-secondary">
+        <a class = "navbar-brand" href = "homepage-static.html">Demo App</a>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse"
+                data-target = "#navbarSupportedContent"
+                aria-controls = "navbarSupportedContent" aria-expanded = "false"
+                aria-label = "Toggle navigation">
+            <span class = "navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <h2  class = "mt-4">Files</h2>
+
+    <table class="table">
+        <thead class = "thead-light">
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Description</th>
+            <th class="text-left"></th>
+            <th class="text-left"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="files: ${filesList}">
+            <td th:text="${files.name}"></td>
+            <td th:text="${files.desc}"></td>
+            <td><a th:href="@{/downloadFile(link=${files.link})}" class="btn btn-info" role="button">Download</a></td>
+            <td><a th:href="@{/deleteFile(link=${files.link})}" class="btn btn-info" role="button">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <form action="#" method="POST" enctype="multipart/form-data"  th:action="@{/uploadFile}" >
+        File to upload: <input type="file" name="file"><br />
+        Title: <input type="text" name="title" required><br /> <br />
+        Desc: <input type="text" name="desc"><br /> <br />
+        Press here to upload the file!<input type="submit" value="Upload">
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
