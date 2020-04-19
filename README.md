@@ -44,4 +44,5 @@ Now to create tables inside the schema:
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ```
-
+After the application is running,
+go to http://localhost/register
